@@ -106,7 +106,7 @@ useEffect(()=>{
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>CRUD App</h2>
+      <h2>Normal CRUD App</h2>
      {message && <p>{message}</p>}
       <input
         placeholder="Name"
