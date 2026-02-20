@@ -2,6 +2,7 @@
 import UserComponent from "./components/userComponent";
 import ProductList from "./components/productList";
 import type { Metadata } from "next";
+import Throttle from "./components/throttle";
 
 import New from "./components/new";
 
@@ -27,6 +28,7 @@ const data = await res.json();
     </div>
     <UserComponent/>
      <New/>
+     <Throttle/>
 
     </>
   );
