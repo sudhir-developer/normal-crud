@@ -16,12 +16,12 @@ export default function ProductList({ products }: { products: Product[] }) {
 
   return (
     <>
-    <div className="newcontainer">
+    <ul className="newcontainer">
       {products.slice(0, visibleCount).map((pro, index) => (
-        <div key={pro.id}  className="productbox">
+        <li key={pro.id}  className="productbox">
             <Image
             src={pro.images[0]}
-            alt={pro.title}
+            alt={`${pro.title} Product image`}
             width={200}
             height={200}
             fetchPriority={index === 0 ? "high" : "auto"}
@@ -33,14 +33,20 @@ export default function ProductList({ products }: { products: Product[] }) {
           />
           {index === 0 ? <h1>{pro.title}</h1> : <h2>{pro.title}</h2>}
           <p>${pro.price}</p>
-        </div>
+        </li>
       ))}
-     </div>
+     </ul>
       {/* loadmore button */}
       <div style={{textAlign:'center'}}>
             <button
              onClick={loadMore}
              disabled={!hasMore}
+             aria-disabled={!hasMore}
+             aria-label={
+              hasMore
+                ? "Load more products"
+                : "No more products available"
+            }
             style={{
                 padding: "10px 20px",
                 cursor: !hasMore? "not-allowed" : "pointer",
