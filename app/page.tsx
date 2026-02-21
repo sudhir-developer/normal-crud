@@ -28,7 +28,7 @@ const data = await res.json();
     </div>
     <UserComponent/>
      <New/>
-     <Throttle/>
+     {/* <Throttle/> */}
 
     </main>
   );
