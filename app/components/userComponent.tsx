@@ -52,7 +52,7 @@ const addUser = async ()=>{
 }
 
 
-const deleteUser = async (id)=>{
+const deleteUser = async (id:string)=>{
  const res = await fetch(`http://localhost:4000/users/${id}`, {
     method: "DELETE",
   });
