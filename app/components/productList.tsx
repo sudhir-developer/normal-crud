@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import { useLoadMore } from "./useLoadMore";
 
 interface Product {
   id: number;
@@ -12,7 +12,7 @@ interface Product {
 }
 
 export default function ProductList({ products }: { products: Product[] }) {
-  const [visibleCount, setVisibleCount] = useState(6);
+  const { visibleCount, loadMore, hasMore } = useLoadMore(products.length, 6);
 
   return (
     <>
@@ -38,17 +38,19 @@ export default function ProductList({ products }: { products: Product[] }) {
      </div>
       {/* loadmore button */}
       <div style={{textAlign:'center'}}>
-            <button onClick={() => setVisibleCount(visibleCount + 6)} disabled={visibleCount >= products.length}
+            <button
+             onClick={loadMore}
+             disabled={!hasMore}
             style={{
                 padding: "10px 20px",
-                cursor: visibleCount >= products.length ? "not-allowed" : "pointer",
-                background: visibleCount >= products.length ? "#696969" : "#f00",
+                cursor: !hasMore? "not-allowed" : "pointer",
+                background: !hasMore ? "#696969" : "#f00",
                 color: "#fff",
                 marginBottom:'30px',
                 borderRadius:'10px'
             }}
             >
-            {visibleCount >= products.length ? "No More" : "Load More"}
+            {!hasMore? "No More" : "Load More"}
             </button>
 
       </div>
