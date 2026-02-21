@@ -44,7 +44,7 @@ export default function ProductList({ products }: { products: Product[] }) {
             style={{
                 padding: "10px 20px",
                 cursor: !hasMore? "not-allowed" : "pointer",
-                background: !hasMore ? "#696969" : "#f00",
+                background: !hasMore ? "#696969" : "#009766",
                 color: "#fff",
                 marginBottom:'30px',
                 borderRadius:'10px'
