@@ -1,8 +1,8 @@
 const Header= ()=>{
  return(
-    <div className="header">
-    <h1>Header</h1>
-    </div>
+    <nav className="header" aria-label="Main navigation">
+    <a href="/">Home</a>
+    </nav>
  )
 
 }

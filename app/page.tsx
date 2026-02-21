@@ -21,7 +21,7 @@ const res = await fetch("https://dummyjson.com/products", {
 const data = await res.json();
 
   return (
-    <>
+    <main>
     <div style={{padding:'20px'}}>
     <ProductList products={data.products} />
     <hr/>
@@ -30,7 +30,7 @@ const data = await res.json();
      <New/>
      <Throttle/>
 
-    </>
+    </main>
   );
 }
 
