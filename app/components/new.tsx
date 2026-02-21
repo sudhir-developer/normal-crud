@@ -36,9 +36,10 @@ useEffect(()=>{
   return (()=>{clearTimeout(timer)})
 }, [search])
 
+/////////////////////
 
 
-
+/////////////////////
 
 
  return(
@@ -55,7 +56,8 @@ useEffect(()=>{
 </ul>
 </>
 )}
-<br/><br/>
+<br/><hr/>
+
 </>
 
  )
