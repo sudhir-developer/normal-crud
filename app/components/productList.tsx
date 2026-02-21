@@ -50,7 +50,7 @@ export default function ProductList({ products }: { products: Product[] }) {
             style={{
                 padding: "10px 20px",
                 cursor: !hasMore? "not-allowed" : "pointer",
-                background: !hasMore ? "#696969" : "#6a0097",
+                background: !hasMore ? "#696969" : "#05876a",
                 color: "#fff",
                 marginBottom:'30px',
                 borderRadius:'10px'
