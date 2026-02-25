@@ -42,7 +42,7 @@ const searchData = useMemo(()=>{
 
 
 
-<ul>
+<ul className="debouncing">
 {searchData?.map((prod)=>(
  <li key={prod.id}>{prod.name} - {prod.price}</li>
 ))}
