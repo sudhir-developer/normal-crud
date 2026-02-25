@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
+import { useMemo, useState } from "react";
+import { useDebounce } from "./deBounce";
 interface Products{
   id:number,
   name:string,
@@ -10,8 +10,8 @@ interface Products{
 
 export default function name() {
   const [search, setSearch]= useState("");
-  const [loading, setLoading] = useState(false);
-  const [debounce, setDebounce] = useState("");
+
+  const debouncedSearch = useDebounce(search,500);
 
   const productData:Products[] = [
     { id: 1, name: "iPhone 15", price: 6432 },
@@ -21,45 +21,34 @@ export default function name() {
    ];
 
 
- const searchQuery = search.toLowerCase();
- const searchData = productData.filter((item=>
-  item.name.toLowerCase().includes(searchQuery) ||
-  item.price.toString().includes(searchQuery)
-));
-
-useEffect(()=>{
-  setLoading(true);
-  const timer = setTimeout(() => {
-    setDebounce(search);
-    setLoading(false);
-  },1500);
-  return (()=>{clearTimeout(timer)})
-}, [search])
-
-/////////////////////
+const searchData = useMemo(()=>{
+  const query = debouncedSearch.toLowerCase();
+  return productData.filter((item=>
+   item.name.toLowerCase().includes(query) ||
+   item.price.toString().includes(query)
+ ));
+},[debouncedSearch])
 
 
-/////////////////////
+
+
+
+
 
 
  return(
 <>
 <input type="text" value={search} onChange={e=>setSearch(e.target.value)} style={{border:'1px solid #000'}}/>
 
-{loading && <p>Loading ...</p>}
 
-{!loading && (<>
-<ul>
+
+<ul className="debouncing">
 {searchData?.map((prod)=>(
  <li key={prod.id}>{prod.name} - {prod.price}</li>
 ))}
 </ul>
-</>
-)}
+
 <br/><hr/>
 
 </>
-
- )
-
-}
+ )}
