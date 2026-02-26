@@ -88,8 +88,6 @@ td{
   display: block;
   margin: 0 auto;
 }
-.hero_bg{
-  background: url('../public/banner.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+.table_outer{
+  overflow: auto;
 }

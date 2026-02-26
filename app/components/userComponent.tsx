@@ -136,6 +136,7 @@ useEffect(()=>{
       )}
   
       <hr style={{margin:'30px 0'}}/>
+      <div className="table_outer">
      <table style={{border:'1px soild #ddd', width:'100%'}}>
       <tbody>
       {users.map((allusers, index) => (
@@ -150,6 +151,7 @@ useEffect(()=>{
       ))}
       </tbody>
       </table>
+      </div>
       </div>
       </div> 
     </>
