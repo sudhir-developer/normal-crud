@@ -41,10 +41,23 @@ const Header= ()=>{
      </div>
    )}
  </header>
- <div className="hero_bg">
- <section className="text-white h-[70vh] flex items-center justify-center px-6">
-          
-      <div className="max-w-3xl text-center">
+
+ <section className="relative h-[70vh] flex items-center justify-center px-6 text-white overflow-hidden">
+      
+      {/* Background Image */}
+      <Image
+        src="/banner.jpg"
+        alt="Banner"
+        fill
+        className="object-cover"
+        priority={false}   // Lazy load (default behavior)
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-3xl text-center">
         
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
           Hi, I'm <span className="text-blue-500">Sudhir Kumar</span>
@@ -67,7 +80,6 @@ const Header= ()=>{
 
       </div>
     </section>
-    </div>
  {/* <div className="grid grid-cols-1 gap-4 p-6">
  <div className="bg-blue-500 text-white p-6">Column 1</div>
 </div> */}
