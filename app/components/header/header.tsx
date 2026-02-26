@@ -1,5 +1,7 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
+
 const Header= ()=>{
    const [isOpen, setIsOpen] = useState(false);
  return(
@@ -39,7 +41,9 @@ const Header= ()=>{
      </div>
    )}
  </header>
- <section className="bg-gray-900 text-white h-[70vh] flex items-center justify-center px-6">
+ <div className="hero_bg">
+ <section className="text-white h-[70vh] flex items-center justify-center px-6">
+          
       <div className="max-w-3xl text-center">
         
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -63,6 +67,7 @@ const Header= ()=>{
 
       </div>
     </section>
+    </div>
  {/* <div className="grid grid-cols-1 gap-4 p-6">
  <div className="bg-blue-500 text-white p-6">Column 1</div>
 </div> */}
