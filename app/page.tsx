@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import Throttle from "./components/throttle";
 
 import New from "./components/new";
+import Example from "./components/example";
 
 export const metadata: Metadata = {
   title: "Home Page",
@@ -22,14 +23,11 @@ const data = await res.json();
 
   return (
     <main>
-    <div style={{padding:'20px'}}>
     <ProductList products={data.products} />
-    <hr/>
-    </div>
     <UserComponent/>
      <New/>
      {/* <Throttle/> */}
-
+    <Example/>
     </main>
   );
 }

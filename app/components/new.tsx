@@ -38,6 +38,8 @@ const searchData = useMemo(()=>{
 
  return(
 <>
+<div className="grid grid-cols-1 gap-4 p-6">
+<div className="bg-gray-400 text-white p-6">
 <input type="text" value={search} onChange={e=>setSearch(e.target.value)} style={{border:'1px solid #000'}}/>
 
 
@@ -49,6 +51,7 @@ const searchData = useMemo(()=>{
 </ul>
 
 <br/><hr/>
-
+</div>
+</div>
 </>
  )}

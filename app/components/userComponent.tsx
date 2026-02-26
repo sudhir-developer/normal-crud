@@ -105,7 +105,9 @@ useEffect(()=>{
 
 
   return (
-    <div style={{ padding: 20 }}>
+<>
+  <div className="grid grid-cols-1 gap-4 p-6">
+   <div className="bg-gray-300 text-black p-6">
       <h2>Add User</h2>
      {message && <p>{message}</p>}
       <input
@@ -148,6 +150,8 @@ useEffect(()=>{
       ))}
       </tbody>
       </table>
-    </div>
+      </div>
+      </div> 
+    </>
   );
 }

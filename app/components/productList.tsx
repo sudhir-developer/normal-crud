@@ -16,9 +16,9 @@ export default function ProductList({ products }: { products: Product[] }) {
 
   return (
     <>
-    <ul className="newcontainer">
-      {products.slice(0, visibleCount).map((pro, index) => (
-        <li key={pro.id}  className="productbox">
+     <div className="grid grid-cols-6 gap-4 p-6">
+     {products.slice(0, visibleCount).map((pro, index) => (
+         <div key={pro.id} className="rounded-[30px] bg-gray-300 hover:bg-blue-400 transition text-black p-6 rounded-lg">
             <Image
             src={pro.images[0]}
             alt={`${pro.title} Product image`}
@@ -33,11 +33,11 @@ export default function ProductList({ products }: { products: Product[] }) {
           />
           {index === 0 ? <h1>{pro.title}</h1> : <h2>{pro.title}</h2>}
           <p>${pro.price}</p>
-        </li>
+          </div>
       ))}
-     </ul>
-      {/* loadmore button */}
-      <div style={{textAlign:'center'}}>
+     </div>
+     <div className="grid grid-cols-1 gap-4 p-6">
+     <div style={{textAlign:'center'}}>
             <button
              onClick={loadMore}
              disabled={!hasMore}
@@ -60,6 +60,8 @@ export default function ProductList({ products }: { products: Product[] }) {
             </button>
 
       </div>
+    </div> 
+   
 
       </>
   );
