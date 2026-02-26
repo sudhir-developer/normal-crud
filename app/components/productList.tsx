@@ -16,7 +16,7 @@ export default function ProductList({ products }: { products: Product[] }) {
 
   return (
     <>
-     <div className="grid grid-cols-6 gap-4 p-6">
+     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-6">
      {products.slice(0, visibleCount).map((pro, index) => (
          <div key={pro.id} className="rounded-[30px] bg-gray-300 hover:bg-blue-400 transition text-black p-6 rounded-lg">
             <Image
