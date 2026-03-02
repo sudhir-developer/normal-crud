@@ -10,17 +10,13 @@ interface Products{
 
 export default function name() {
   const [search, setSearch]= useState("");
-
   const debouncedSearch = useDebounce(search,500);
-
   const productData:Products[] = [
     { id: 1, name: "iPhone 15", price: 6432 },
     { id: 2, name: "Samsung Galaxy S23", price: 490  },
     { id: 3, name: "MacBook Air Laptop", price: 765  },
     { id: 4, name: "Dell XPS Laptop", price: 6754  }
    ];
-
-
 const searchData = useMemo(()=>{
   const query = debouncedSearch.toLowerCase();
   return productData.filter((item=>
