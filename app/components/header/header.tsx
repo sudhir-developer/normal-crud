@@ -18,6 +18,7 @@ const Header= ()=>{
      <nav className="hidden md:flex space-x-6">
        <a href="/" className="hover:text-blue-600 transition">Home</a>
        <a href="/aboutus" className="hover:text-blue-600 transition">About</a>
+       <a href="/contactus" className="hover:text-blue-600 transition">Contact Us</a>
      </nav>
 
      {/* Mobile Button */}
