@@ -93,12 +93,14 @@ const handleToggle = (id: number) => {
             >
               {user.title} -
               <b>
+                <label>
                 {user.completed ? "True" : "False"}
                 <input
                   type="checkbox"
                   checked={user.completed}
                   onChange={() => handleToggle(user.id)}
                 />
+                </label>
               </b>
             </div>
           ))}

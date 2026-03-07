@@ -43,7 +43,7 @@ td{
   padding: 10px;
 }
 .add_btn{
-  background: rgb(3, 135, 106);
+  background:#046c55;
   color: #fff;
   padding: 11px 10px;
   border-radius: 5px;
@@ -58,7 +58,7 @@ td{
 }
 
 .update_btn{
-  background: rgb(3, 135, 106);
+  background: #046c55;
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;

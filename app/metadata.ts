@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const baseMetadata: Metadata = {
   metadataBase: new URL("https://yourwebsite.com"),
   openGraph: {
-    siteName: "Demo Project",
+    siteName: "Project",
     type: "website",
   },
   twitter: {
