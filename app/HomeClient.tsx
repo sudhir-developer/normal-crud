@@ -7,7 +7,7 @@ import UserComponent from "./components/userComponent";
 import Throttle from "./components/throttle";
 import HomeBanner from "./components/homebanner";
 import New from "./components/new";
-import Example from "./components/example";
+
 
 export default function HomeClient({ products }:any) {
   const context = useContext(ThemeContext);
@@ -30,7 +30,7 @@ export default function HomeClient({ products }:any) {
     <UserComponent/>
      <New/>
      {/* <Throttle/> */}
-    <Example/>
+
       
     </div>
   );

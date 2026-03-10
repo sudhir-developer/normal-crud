@@ -18,6 +18,10 @@ const Header= ()=>{
      <nav className="hidden md:flex space-x-6">
        <a href="/" className="hover:text-blue-600 transition">Home</a>
        <a href="/aboutus" className="hover:text-blue-600 transition">About</a>
+       <a href="/example" className="hover:text-blue-600 transition">Example</a>
+       <a href="/chart" className="hover:text-blue-600 transition">Chart</a>
+       <a href="/d3chart" className="hover:text-blue-600 transition">D3 Chart</a>
+       <a href="/threejschart" className="hover:text-blue-600 transition">Three Js Chart</a>
        <a href="/contactus" className="hover:text-blue-600 transition">Contact Us</a>
      </nav>
 
@@ -33,8 +37,15 @@ const Header= ()=>{
    {/* Mobile Menu */}
    {isOpen && (
      <div className="md:hidden bg-gray-100 px-6 pb-4 space-y-3">
-       <a href="/" className="block">Home</a>
-       <a href="/aboutus" className="block">About</a>
+       <div className="mobile_menu">
+       <a href="/" className="hover:text-blue-600 transition link">Home</a>
+       <a href="/aboutus" className="hover:text-blue-600 transition link">About</a>
+       <a href="/example" className="hover:text-blue-600 transition link">Example</a>
+       <a href="/chart" className="hover:text-blue-600 transition link">Chart</a>
+       <a href="/d3chart" className="hover:text-blue-600 transition link">D3 Chart</a>
+       <a href="/threejschart" className="hover:text-blue-600 transition link">Three Js Chart</a>
+       <a href="/contactus" className="hover:text-blue-600 transition link">Contact Us</a>
+       </div>
      </div>
    )}
  </header>

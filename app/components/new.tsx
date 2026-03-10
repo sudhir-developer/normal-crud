@@ -35,9 +35,15 @@ const searchData = useMemo(()=>{
  return(
 <>
 <div className="grid grid-cols-1 gap-4 p-6">
-<div className="bg-gray-400 text-white p-6">
-<input type="text" value={search} onChange={e=>setSearch(e.target.value)} style={{border:'1px solid #000'}}/>
-
+<div className="bg-gray-100 text-black p-6">
+<label htmlFor="search">Search
+<input id="search" type="text" value={search} onChange={e=>setSearch(e.target.value)}
+aria-label="Search"
+placeholder="Search..."
+ style={{fontSize:'16px', backgroundColor:'#364153', color:'#fff'}}
+ className="p-2"
+/>
+</label>
 
 
 <ul className="debouncing">
