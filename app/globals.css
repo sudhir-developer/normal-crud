@@ -91,3 +91,9 @@ td{
 .table_outer{
   overflow: auto;
 }
+.word_break{
+  word-break: break-all;
+}
+.mobile_menu .link{
+  display: block;
+}

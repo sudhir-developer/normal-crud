@@ -1,15 +1,15 @@
+
 import ContactComponent from "../components/contactComponent";
 import { createMetadata } from "../metadata";
+import { fetchContactData } from "../hooks/useContactData";
 export const metadata = createMetadata(
   "Contact Us",
   "Welcome to our Contact Us"
 );
-export default async function Contactus(){
- 
-const res = await fetch("https://jsonplaceholder.typicode.com/todos");
- const data = await res.json();
 
-    
+export default async function Contactus(){
+ const data = await fetchContactData();
+
      return(
         <>
        <div className="container mx-auto">

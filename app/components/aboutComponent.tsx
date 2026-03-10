@@ -15,6 +15,7 @@ function AboutComponent(){
   const context = useContext(ThemeContext);
   if (!context) return null;
   const { theme,toggleTheme } = context;
+  
 const [users, setUsers] = useState<User[]>([]);
 const [loading, setLoading] = useState(false);
 const [visibleCount, setVisibleCount] = useState(16);
